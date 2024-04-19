@@ -19,7 +19,7 @@ class DataIngestion:
         logging.info("entered the data ingestion method or component")
 
         try:
-            df=pd.read_csv('notebook\data\online_retail.csv',encoding="ISO-8859-1")
+            df=pd.read_csv('notebook\data\stud.csv')
             logging.info('read the dataset as dataframe')
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
